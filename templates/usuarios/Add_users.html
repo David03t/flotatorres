@@ -1,0 +1,101 @@
+{% extends 'base/Base.html' %} {% block content %}
+<main>
+    <form class="formularios" action="" method="POST">
+        {% csrf_token %}
+        <div class="titulo_formulario">
+            <h1>Añadir usuarios</h1>
+        </div>
+        <!-- {{ form.as_p}} -->
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+
+                <label for="id_nombre" class="col-sm-3 col-form-label">Nombre</label>
+                <div class="col-sm-9">
+                    <input type="text" class="input_usuario" id="nombre_usuario id_nombre" name="nombre"
+                        placeholder="Ingrese su nombre" required>
+                </div>
+            </div>
+
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+                <label for="id_apellido" class="col-sm-3 col-form-label">Apellido</label>
+                <div class="col-sm-9">
+                    <input type="text" class=" input_usuario" id="apellido_usuario id_apellido" name="apellido"
+                        placeholder="Ingrese su Apellido" required>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_telefono" class="col-sm-3 col-form-label">Telefono</label>
+                <div class="col-sm-9">
+                    <input type="number" class=" input_usuario" id="telefono_usuario id_telefono" name="telefono"
+                        placeholder="Ingrese su telefono" required>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_correo" class="col-sm-3 col-form-label">Correo</label>
+                <div class="col-sm-9">
+                    <input type="email" class=" input_usuario" id="correo_usuario id_correo" name="correo"
+                        placeholder="Ingrese su Correo" required>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_edad" class="col-sm-3 col-form-label">Edad</label>
+                <div class="col-sm-9">
+                    <input type="number" class=" input_usuario" id="edad_usuario id_edad" name="edad"
+                        placeholder="Ingrese su Edad" required min="14" max="90">
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_tipo_de_documento" class="col-sm-3 col-form-label">Tipo de Documento</label>
+                <div class="col-sm-9">
+                    <select name="tipo_de_documento" id="tipo_documento id_tipo_de_documento" class="tipo_documento input_usuario">
+
+                        {% for tipo_documento in td %}
+                        <option value="{{tipo_documento.id}}">{{tipo_documento.tipo_documento}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_numero_de_documento" class="col-sm-3 col-form-label">Numero de documento</label>
+                <div class="col-sm-9">
+                    <input type="number" class=" input_usuario" id="numero_documento id_numero_de_documento" name="numero_de_documento"
+                        placeholder="Ingrese su Numero de Documento" required min="1000">
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_rh" class="col-sm-3 col-form-label">Tipo de RH</label>
+                <div class="col-sm-9">
+                    <select name="rh" id="tipo_rh id_rh" class="tipo_rh input_usuario">
+                        {% for tipo_sangre in ts %}
+                        <option value="{{tipo_sangre.id}}">{{tipo_sangre.tipo_rh}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-light">Ingresar usuario</button>
+        <a type="button" href="/usuarios" class="btn btn-info">Volver</a>
+    </form>
+</main>
+{% endblock %}

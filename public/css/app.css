@@ -1,0 +1,175 @@
+/* colores:
+ #005AFF Azul Claro
+ #003FB3 Azul Oscuro
+ #FFAE00 Dorado
+ #FFB619 Amarillo Claro
+ #B37A00 Amarillo Cafe    */
+/* margen y padding en 0 de la pagina  */
+
+/* base.html */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: EBGaramond-Regular;
+    /* min-width: 600px; */
+}
+/* body Base */
+body{
+    min-width: 600px;
+}
+p{
+    text-align: justify;
+}
+/* barra de navegacion */
+#Navegacion{
+    background: rgb(0,63,179);
+    background: linear-gradient(152deg, rgba(0,63,179,1) 0%, rgba(0,77,217,1) 50%, rgba(0,90,255,1) 100%);
+}
+/* logo de la barra de navegacion */
+#LogoNav{
+    height: 40px;
+}
+/* main */
+#container{
+    margin: 3% 9% 2% 9%;
+}
+/* footer */
+footer{
+    background: rgb(179,122,0);
+background: linear-gradient(146deg, rgba(179,122,0,1) 0%, rgba(218,153,13,1) 50%, rgba(255,182,25,1) 100%);
+}
+#container_footer{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-rows: repeat(3,1fr); */
+    
+}
+/* espacios Footer */
+#espacio_footer1{
+    /* display: flex; */
+    margin: auto;   
+}
+#espacio_footer4{
+    display: flex;
+    margin: auto;
+}
+#espacio_footer5{
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+/* texto footer */
+#espacio_footer2,#espacio_footer2 ul li ul li a, #espacio_footer3, #espacio_footer5{
+    color: white;
+    text-decoration: none;
+}
+/* iconos de ul footer */
+#espacio_footer2 ul,  #espacio_footer3 ul{
+    /* align-items: center; */
+    list-style: none;
+    list-style-image: url("../Images/Footer/icon_footer.png");   
+}
+#espacio_footer3 ul li a{
+    text-decoration: none;
+    color: white;
+}
+/* imagenes footer */
+.imagenes_footer{
+    height: 70px;
+    margin: 1%;
+}
+.imagenes_footer2{
+    height: 70px;
+    /* margin: auto; */
+}
+/* fin Base.html */
+
+/* Decreto 1168 */
+#decreto_1168{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* Fin Decreto 1168 */
+
+/* Servicio al cliente */
+.contenedor_titulo{
+    width: 70%;
+    margin: auto;
+}
+
+#todo_s_c{
+    position: relative;
+    opacity: 1;
+    background: none;
+}
+#titulo_servicio_al_cliente{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #FFAE00;
+    min-height: 45px;
+    border-radius: 40px;
+    color: white;
+}
+#titulo_servicio_al_cliente h2{
+    margin: 0;
+}
+.subtitulo_servicio_al_cliente{
+    margin: 0;
+    color: #FFAE00;
+}
+/* Fin Servicio al cliente */
+/* inicio */
+.con{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+/* formularios */
+.tablas_dinamicas{
+    font-size: small;
+}
+.formularios{
+    background: rgb(239,126,40);
+    background: linear-gradient(149deg, rgba(239,126,40,1) 0%, rgba(247,145,27,1) 50%, rgba(255,164,14,1) 100%);
+    padding: 5%;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.titulo_formulario{
+    display: flex;
+    justify-content: center;
+}
+.contenedor_input_usuario{
+    border: solid white;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+    background: rgb(0,63,179);
+    background: linear-gradient(90deg, rgba(0,63,179,1) 0%, rgba(0,77,217,1) 50%, rgba(0,90,255,1) 100%);
+}
+.tipo_documento, .tipo_rh{
+    width: 100%;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+.input_usuario{
+    color: white;
+    background-color:  rgba(0,90,255,1);
+    border: solid transparent;
+    width: 100%;
+    border-radius: 20px;
+}
+.input_usuario::placeholder{
+    color: rgb(255, 255, 255);
+}
+.input_usuario:-ms-input-placeholder {
+    color: rgb(255, 255, 255);
+}
+.input_usuario::-ms-input-placeholder {
+    color: rgb(255, 255, 255);
+}

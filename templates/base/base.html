@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" />
+  <link href="https://cdn.datatables.net/1.12.0/css/dataTables.bootstrap5.min.css" />
+  <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <title>Flota Torres</title>
+</head>
+
+<body>
+  <script src="{% static 'js/uno.js' %}"></script>
+  <script src="{% static 'js/dos.js' %}"></script>
+  <script src="{% static 'js/tres.js' %}"></script>
+  <Script>
+    $(document).ready(function () {
+      $('.tablas_dinamicas').DataTable();
+    });
+  </Script>
+
+  <nav class="navbar navbar-expand-lg navbar-dark" id="Navegacion">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="{% static 'images/Head/icon.png' %}" alt="" id="LogoNav" />Flota
+        Torres</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <div class="navbar-nav me-auto mb-2 mb-lg-0"></div>
+        <!-- <span class="navbar-text">
+                  Navbar text with an inline element
+                </span> -->
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/usuarios">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/viajes">Viajes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="container">
+
+    {% block content %} {% endblock %}
+  </div>
+  <footer>
+    <br>
+    <div id="container_footer">
+      <div id="espacio_footer1">
+        <img class="imagenes_footer"
+          src="https://www.flotalamacarena.com/wp-content/themes/lamacarena/assets/images/logo-supertransporte2.png"
+          alt="Supertransporte" />
+        <br />
+        <img class="imagenes_footer" src="http://www.flotalamacarena.com/wp-content/uploads/2017/09/sello-de-oro.png" />
+        <br />
+        <img class="imagenes_footer"
+          src="http://www.flotalamacarena.com/wp-content/uploads/2017/09/operaciones-bio.png" />
+      </div>
+      <div id="espacio_footer2">
+        <h3>Comunicate al:</h3>
+        <ul>
+          <li>
+            Bogota
+            <ul>
+              <li>
+                <a href="https://api.whatsapp.com/send?phone=573103908996">+57 3103908996</a>
+              </li>
+              <li>
+                <a href="https://api.whatsapp.com/send?phone=573017043040">+57 3017043040</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Ubicacion
+            <ul>
+              <li>
+                <a href="https://goo.gl/maps/WWUeoeEDBz6XzNQ7A">Cl. 17, Mosquera, Cundinamarca</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Correo Electronico
+            <ul>
+              <li>
+                <a href="mailto:servicioalcliente@flotatorres.com">
+                  servicioalcliente@flotatorres.com</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="espacio_footer3">
+        <h3>Preguntas Frecuentes:</h3>
+        <ul>
+          <li><a href="/bioseguridad">Recomendaciones de Bioseguridad</a></li>
+          <li><a href="/decreto_1168">Decreto 1168 de 2020</a></li>
+          <li><a href="/servicio_al_cliente">Servicio al Cliente</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="espacio_footer4">
+      <div id="espacio_footer5">
+        <img class="imagenes_footer2" src="http://www.flotalamacarena.com/wp-content/uploads/2017/09/isos2020.png" />
+        <p>Todos los Derechos reservados Flota Torres S.A.S</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

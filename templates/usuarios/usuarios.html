@@ -1,0 +1,40 @@
+{% extends 'base/Base.html' %} {% block content %}
+{{ form.as_p}}
+<main>
+    <a href="insertar_usuarios" type="button" class="btn btn-primary">Añadir Usuario</a>
+    <table class="table table-striped tablas_dinamicas" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Correo</th>
+                <th>Edad</th>
+                <th>Tipo de Documento</th>
+                <th>Numero de Documento</th>
+                <th>Tipo de persona</th>
+                <th>RH</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario.id }}</td>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.apellido }}</td>
+                <td>{{ usuario.telefono }}</td>
+                <td>{{ usuario.correo }}</td>
+                <td>{{ usuario.edad }}</td>
+                <td>{{ usuario.tipo_documento }}</td>
+                <td>{{ usuario.numero_de_documento }}</td>
+                <td>{{ usuario.tipo_de_persona }}</td>
+                <td>{{ usuario.tipo_rh }}</td>
+                <td><a href="editar_usuarios/{{usuario.id}}" type="button" class="btn btn-warning">Modificar</a> | <a onclick="return confirm('esta seguro que desea borrar el usuario');"  href="borrar_usuarios/{{usuario.id}}" type="button" class="btn btn-danger">Eliminar</a></td>                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</main>
+{% endblock %}

@@ -1,0 +1,155 @@
+{% extends 'base/Base.html' %}
+{% load static %}
+{% block content %}
+<main>
+
+    <div id="todo_s_c">
+        <div class="contenedor_titulo">
+            <div id="titulo_servicio_al_cliente">
+                <h2>Servicio al Cliente</h2>
+            </div>
+        </div>
+        <br>
+        <p>En servicio al cliente de Flota Torres S.A.S, nos encargamos de definir estándares específicos para escuchar,
+            manejar y dar soluciones a las inquietudes y quejas que se te puedan generar en tu experiencia como usuario
+        </p>
+        <img src="{% static 'images/body/buses/s_c_1.jpg' %}" alt="" width="100%" height="100%">
+        <h3 class="subtitulo_servicio_al_cliente">Ten en cuenta las siguientes recomendaciones para tu viaje:</h3>
+        <br>
+        <ul>
+            <li>Exije siempre tu boleto de viaje y no lo entregues a nadie. Recuerda que es tu comprobante de compra del
+                servicio.</li>
+            <li>Exije que a tu equipaje se le asigne una ficha y no la entregues hasta recibirlo a satisfacción.
+                Preferiblemente, marca tu equipaje con todos tus datos personales, esto facilitará la ubicación en caso
+                de
+                extravío.</li>
+            <li>No aceptes bebidas ni alimentos de personas extrañas.</li>
+            <li>Compra tu boleto de viaje por lo menos con una hora de anticipación e identifica la puerta de abordaje.
+            </li>
+            <li>Tienen servicio gratuito todos los niños hasta los tres (3) años, siempre que viajen acompañados por una
+                persona mayor de edad en posesión de su tiquete de viaje, correspondiente a la misma ruta y horario.
+            </li>
+            <li>Cancela tu boleto de viaje únicamente en las taquillas autorizadas por la compañía.</li>
+            <li>Exije que el dispositivo de control de velocidad esté funcionando adecuadamente y reporta las
+                irregularidades a la empresa en las líneas de contacto.</li>
+            <li>Utiliza los baños de los vehículos, únicamente para descargar líquidos.</li>
+            <li>Ubica tus objetos de mano en los compartimientos establecidos para tal fin y no los olvides cuando
+                desbordes
+                el vehículo (recuerda que la empresa no responde por ellos).</li>
+            <li>Si tienes que utilizar el baño del vehículo, camina con precaución apoyándote en los cabeceros de las
+                sillas.</li>
+            <li>No exhibas ni uses tus objetos de valor o accesorios durante el viaje.</li>
+        </ul>
+        <h3 class="subtitulo_servicio_al_cliente">Preguntas Frecuentes</h3>
+        <br>
+
+        <h4>¿Cuál es la política de Seguridad Vial?</h4>
+        <br>
+        <p>Flota Torres S.A.S como empresa de Transporte Terrestre Intermunicipal de Pasajeros por carretera certificada
+            con la NTC- ISO 39001:2014 alineada con el Plan Nacional de Seguridad Vial, asigna los recursos necesarios
+            para
+            el sostenimiento del sistema, cumple con la legislación vigente, mejora continuamente los factores de la
+            seguridad vial, adoptando mecanismos de identificación, prevención y adoptando buenas prácticas en sus
+            procesos,
+            para minimizar los accidentes viales, siempre en búsqueda del fortalecimiento de estrategias de información,
+            comunicación, concientización, sensibilización y capacitación para la promoción de hábitos y comportamientos
+            seguros en la vía, para nuestros usuarios, colaboradores, afiliados y operadores de vehículos.</p>
+        <hr>
+        <h4>¿Puedo viajar con mi mascota?</h4>
+        <br>
+        <p>Requisitos mínimos:
+        <ul>
+            <li>Solo pueden viajar perros y gatos de razas pequeñas y medianas,en un guacal duro y especializado.</li>
+            <li>La mascota debe llevar pañal.</li>
+            <li>Presentar el carné de vacunas vigente.</li>
+            <li>Se le debe pagar un pasaje normal y viaja al lado de su dueño.</li>
+        </ul>
+        Recuerda que nos reservamos el derecho de transporte de las mascotas en temporadas altas. Si deseas más
+        información,
+        comunícate a nuestras líneas de atención al Cliente.
+        </p>
+        <hr>
+        <h4>¿Las rutas son directas o hacen paradas en algún punto?</h4>
+        <br>
+        <p>Existen directas y otras con conexión en algunas poblaciones ó paradas en los puntos de control autorizados.
+        </p>
+        <hr>
+        <h4>¿Con cuánto equipaje puedo viajar?</h4>
+        <br>
+        <p>Todo pasajero tiene derecho a llevar 25k y/o 80cm de diámetro de equipaje, el resto tendrá un sobre costo.
+        </p>
+        <hr>
+        <h4>¿Viajan a Puerto Carreño?</h4>
+        <br>
+        <p>Sí viajamos, desde Villavicencio y únicamente en época de verano.</p>
+        <hr>
+        <h4>¿Con cuánta anterioridad debo llegar a una agencia o terminal para abordar mi vehículo?</h4>
+        <br>
+        <p>Si tienes un tiquete comprado con anterioridad te recomendamos llegar 20 minutos antes del viaje. Si te
+            diriges a
+            realizar la compra, recomendamos llegar con una hora de anticipación a la hora que deseas viajar.</p>
+        <hr>
+        <h4>¿Los menores de edad cancelan tiquete?</h4>
+        <br>
+        <p>Todo niño mayor de tres (03) años paga pasaje y ocupa su respectivo puesto.</p>
+        <hr>
+        <h4>¿Qué debo hacer si no puedo viajar y había comprado un tiquete con anterioridad?</h4>
+        <br>
+        <p>Es importante como primera medida notificar a la compañía por lo menos una (01) hora antes de la hora del
+            viaje,
+            luego debes acercarte al terminal en el menor tiempo posible para dejar un tiquete abierto por 30 días.</p>
+        <hr>
+        <h4>¿Se realizan reservas telefónicamente?</h4>
+        <br>
+        <p>Por el momento Flota Torres S.A.S no realiza reservas ni apartado de tiquetes, únicamente venta presencial en
+            taquilla en el momento del viaje.</p>
+        <hr>
+        <h4>¿En qué puntos se pueden abordar los vehículos aparte de la Terminal?</h4>
+        <br>
+        <p>Los puntos autorizados para aboradaje de pasajeros en Bogotá, son Terminal de Transporte Salitre, Terminal de
+            Transporte Sur, Oficina Yomasa y Terminal Norte.</p>
+        <p>“El vehículo debe ser abordado por el pasajero ÚNICAMENTE en la oficina o Terminal de Transporte donde
+            realizó
+            la compra de su boleto de viaje y/ o donde el boleto especifica el lugar de origen”</p>
+        <hr>
+        <h4>¿Todos los vehículos de Flota Torres S.A.S tienen baño y aire acondicionado?</h4>
+        <br>
+        <p>No. Los vehículos tienen baño y aire acondicionado según el servicio y las condiciones del mismo. Para mayor
+            información, consulta nuestros servicios en www.flotatorres.com</p>
+        <hr>
+        <h4>¿Tienen el número telefónico de otras empresas?</h4>
+        <br>
+        <p>Somos un servicio exclusivo.Flota Torres S.A.S no maneja información de otras compañías; lo que si podemos
+            hacer, es darte el número telefónico de la Terminal de Transporte principal en Bogotá que es el (1) 4233630
+            para que te proporcionen la información que requieres.</p>
+        <hr>
+        <h4>¿Flota Torres S.A.S viaja hacia Yopal?</h4>
+        <br>
+        <p>No viajamos a ese destino.</p>
+        <hr>
+        <h4>¿Dónde puedo consultar tarifas y horarios de los servicios?</h4>
+        <br>
+        <p>Puedes consultar información de Tarifas y Horarios en:</p>
+        <p> Página Web: www.flotatorres.com</p>
+        <p> Correo electrónico:servicioalcliente@flotatorres.com</p>
+        <p> Líneas telefónicas de atención al cliente: (+57) 3103908996, Bogotá</p>
+        <p>Se aconseja en temporadas normales presentarse como mínimo 1 hora antes. En temporadas altas preferiblemente
+            una hora y media antes.</p>
+        <hr>
+        <h4>¿Si se me pierde el equipaje qué debo hacer?</h4>
+        <br>
+        <p>Si estás en Bogotá o Villavicencio, debes acercarte a la Terminal de Transportes y solicitar acompañamiento o
+            ayuda del personal de Servicio al Cliente (aplican determinados horarios). Para el resto de oficinas del
+            país y en horarios donde no hay presencia de personal SAC, debes enviar un correo electrónico a la dirección
+            servicioalcliente@flotatorres.com, adjuntando ficha de equipaje, tiquete de compra y describiendo los hechos
+            y objetos extraviados u olvidados. Recuerda que los objetos considerados de mano son responsabilidad del
+            pasajero y la empresa no responde por los mismos</p>
+        <hr>
+        <h4>¿Qué medios de pago aceptan en la taquilla?</h4>
+        <br>
+        <p>En todas nuestras oficinas se pueden adquirir los tiquetes en efectivo. En las Terminales de Transporte del
+            Salitre en Bogotá y la Terminal de Transporte de Villavicencio, es posible adquirir el tiquete cancelando
+            con Tarjeta de Crédito.</p>
+    </div>
+</main>
+{% endblock %}
