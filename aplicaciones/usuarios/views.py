@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Usuarios, TipoDocumentos, TipoSangre
 from .forms import UsuarioForm
-
+import pandas as pd
+import matplotlib.pyplot as plt
 # Create your views here.
 
 def usuario_urls(request):
@@ -49,3 +50,14 @@ def borrar_usuarios(request,id):
     usuario = Usuarios.objects.get(id = id)
     usuario.delete()
     return redirect('usuario_urls')
+
+def graficar_usuarios(request):
+    usuarios = Usuarios.objects.values()
+    valores = pd.DataFrame(usuarios)
+    print(valores)
+    y = valores['id']
+    x = valores['nombre']
+    print(y,x)
+    plt.bar(x,y)
+    plt.show()
+    return redirect(usuario_urls)
