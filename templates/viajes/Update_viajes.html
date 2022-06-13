@@ -1,0 +1,98 @@
+{% extends 'base/Base.html' %} {% block content %}
+<main>
+    <form class="formularios" action="" method="POST">
+        {% csrf_token %}
+        <div class="titulo_formulario">
+            <h1>Añadir Viajes</h1>
+        </div>
+        <!-- {{ form.as_p}} -->
+        
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_tarifa" class="col-sm-3 col-form-label">Tarifa</label>
+                <div class="col-sm-9">
+                    <select name="tarifa" id="tipo_documento id_tarifa" class="tarifa input_usuario" value="{{viajes.tarifa.value}}">
+
+                        {% for tarifa in Tarifa %}
+                        <option value="{{tarifa.precios}}">{{tarifa.precios}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_id_ciudad_1" class="col-sm-3 col-form-label">Ciudad inicio</label>
+                <div class="col-sm-9">
+                    <select name="id_ciudad_1" id="tipo_documento id_id_ciudad_1" class="id_ciudad_1 input_usuario" value="{{viajes.id_ciudad_1.value}}">
+
+                        {% for ciudades in Ciudad %}
+                        <option value="{{ciudades.ciudad}}">{{ciudades.ciudad}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_id_ciudad_2" class="col-sm-3 col-form-label">Ciudad destino</label>
+                <div class="col-sm-9">
+                    <select name="id_ciudad_2" id="tipo_documento id_id_ciudad_2" class="id_ciudad_2 input_usuario" value="{{viajes.id_ciudad_2.value}}">
+
+                        {% for ciudades in Ciudad %}
+                        <option value="{{ciudades.ciudad}}">{{ciudades.ciudad}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_id_hora" class="col-sm-3 col-form-label">Horario</label>
+                <div class="col-sm-9">
+                    <select name="id_hora" id="tipo_documento id_id_hora" class="id_hora input_usuario" value="{{viajes.id_hora.value}}">
+
+                        {% for horas in Hora %}
+                        <option value="{{horas.hora_salida}}">{{horas.hora_salida}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_id_vehiculo" class="col-sm-3 col-form-label">Vehiculo</label>
+                <div class="col-sm-9">
+                    <select name="id_vehiculo" id="tipo_documento id_id_vehiculo" class="id_vehiculo input_usuario" value="{{viajes.id_vehiculo.value}}">
+
+                        {% for vehiculo in Vehiculo %}
+                        <option value="{{vehiculo.id}}">{{vehiculo.placa}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor_input_usuario">
+            <div class="mb-3 row">
+
+                <label for="id_usuario_conductor" class="col-sm-3 col-form-label">Usuario Conductor</label>
+                <div class="col-sm-9">
+                    <select name="usuario_conductor" id="tipo_documento id_usuario_conductor" class="usuario_conductor input_usuario" value="{{viajes.usuario_conductor.value}}">
+
+                        {% for usuarios in Usuario %}
+                        <option value="{{usuarios.nombre}}">{{usuarios.nombre}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-light">Ingresar viaje</button>
+        <a type="button" href="/viajes" class="btn btn-info">Volver</a>
+    </form>
+</main>
+{% endblock %}

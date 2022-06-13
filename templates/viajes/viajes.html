@@ -1,12 +1,34 @@
-{% extends 'base/Base.html' %}
-    {% block content %}
-    <h1>Este apartado aun no se encuentra disponible</h1>
-    <h2>por favor vuelva a la pagina inicial</h2>
-    <script>
-        function volver(){
-
-            window.location.href='/'
-        }
-        setTimeout(volver,4000 )
-    </script>
-    {% endblock %}
+{% extends 'base/Base.html' %} {% block content %}
+{{ form.as_p}}
+<main>
+    <a href="insertar_viajes" type="button" class="btn btn-primary">Añadir viaje</a>
+    <table class="table table-striped tablas_dinamicas" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tarifa</th>
+                <th>Ciudad inicio</th>
+                <th>Ciudad destino</th>
+                <th>Horario</th>
+                <th>Id del vehiculo</th>
+                <th>Conductor</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for viaje in viajes %}
+            <tr>
+                <td>{{ viaje.id }}</td>
+                <td>{{ viaje.tarifa }}</td>
+                <td>{{ viaje.id_ciudad_1 }}</td>
+                <td>{{ viaje.id_ciudad_2 }}</td>
+                <td>{{ viaje.id_hora }}</td>
+                <td>{{ viaje.id_vehiculo }}</td>
+                <td>{{ viaje.usuario_conductor }}</td>                                                                                                          
+                <td><a href="editar_viajes/{{viaje.id}}" type="button" class="btn btn-warning">Modificar</a> | <a onclick="return confirm('esta seguro que desea borrar el viaje');"  href="borrar_viajes/{{viaje.id}}" type="button" class="btn btn-danger">Eliminar</a></td>                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</main>
+{% endblock %}
