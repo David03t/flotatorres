@@ -1,0 +1,28 @@
+{% extends 'base/Base.html' %} {% block content %}
+{{ form.as_p}}
+<main>
+    <a href="/insertar_ticket" type="button" class="btn btn-primary">Añadir ticket</a>
+    <table class="table table-striped tablas_dinamicas" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>ID viaje</th>
+                <th>Usuario Nombre</th>
+                <th>Sillas adquiridas</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ticket in tickets %}
+            <tr>
+                <td>{{ ticket.id }}</td>
+                <td>{{ ticket.id_viaje }}</td>
+                <td>{{ ticket.usuario_id }}</td>
+                <td>{{ ticket.sillas }}</td>                                                                                                       
+                <td><a href="editar_ticket/{{ticket.id}}" type="button" class="btn btn-warning">Modificar</a> | <a onclick="return confirm('esta seguro que desea borrar el viaje');"  href="borrar_ticket/{{ticket.id}}" type="button" class="btn btn-danger">Eliminar</a></td>                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</main>
+{% endblock %}

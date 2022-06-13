@@ -47,4 +47,4 @@ def actualizar_viajes(request,id):
 def borrar_viajes(request,id):
     viajes = Viajes.objects.get(id = id)
     viajes.delete()
-    return redirect('viajes_urls')
+    return redirect('viajes_url')

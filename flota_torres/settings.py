@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'aplicaciones.inicio.views',
     'aplicaciones.usuarios',
+    'aplicaciones.ticketes',
     'aplicaciones.viajes'
 ]
 
