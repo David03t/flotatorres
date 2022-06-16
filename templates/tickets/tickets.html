@@ -19,7 +19,7 @@
                 <td>{{ ticket.id_viaje }}</td>
                 <td>{{ ticket.usuario_id }}</td>
                 <td>{{ ticket.sillas }}</td>                                                                                                       
-                <td><a href="editar_ticket/{{ticket.id}}" type="button" class="btn btn-warning">Modificar</a> | <a onclick="return confirm('esta seguro que desea borrar el viaje');"  href="borrar_ticket/{{ticket.id}}" type="button" class="btn btn-danger">Eliminar</a></td>                
+                <td><a href="editar_ticket/{{ticket.id}}" type="button" class="btn btn-warning">Modificar</a> | <a onclick="return confirm('Esta seguro que desea borrar el ticket {{ ticket.id_viaje }} {{ ticket.usuario_id }}');"  href="borrar_ticket/{{ticket.id}}" type="button" class="btn btn-danger">Eliminar</a></td>                
             </tr>
             {% endfor %}
         </tbody>

@@ -3,7 +3,7 @@
     <form class="formularios" action="" method="POST">
         {% csrf_token %}
         <div class="titulo_formulario">
-            <h1>Añadir Ticket</h1>
+            <h1>Actualizar Tickets</h1>
         </div>
         <!-- {{ form.as_p}} -->
         
@@ -12,7 +12,7 @@
 
                 <label for="id_id_viaje" class="col-sm-3 col-form-label">Viaje</label>
                 <div class="col-sm-9">
-                    <select name="id_viaje" id="tipo_documento id_id_viaje" class="id_viaje input_usuario">
+                    <select name="id_viaje" id="id_id_viaje" class="id_viaje input_usuario">
 
                         {% for viajes in Viaje %}
                         <option value="{{viajes.id_ciudad_1}} - {{viajes.id_ciudad_2}}">{{viajes.id_ciudad_1}} - {{viajes.id_ciudad_2}}</option>
@@ -26,10 +26,10 @@
 
                 <label for="id_usuario_id" class="col-sm-3 col-form-label">Usuario</label>
                 <div class="col-sm-9">
-                    <select name="usuario_id" id="tipo_documento id_usuario_id" class="usuario_id input_usuario">
+                    <select name="usuario_id" id="id_usuario_id" class="usuario_id input_usuario">
 
                         {% for usuario in Usuario %}
-                        <option value=" {{usuario.id}} - {{usuario.nombre}}">{{usuario.id}} - {{usuario.nombre}}</option>
+                        <option value="{{usuario.id}} - {{usuario.nombre}}">{{usuario.id}} - {{usuario.nombre}}</option>
                         {% endfor %}
                     </select>
                 </div>
@@ -41,12 +41,21 @@
                 <label for="id_sillas" class="col-sm-3 col-form-label">Pasajes</label>
                 <div class="col-sm-9">
                     <input type="number" class="input_usuario" id="id_sillas" name="sillas"
-                        placeholder="Ingrese sus Sillas" required max="40" min="1">
+                        placeholder="Ingrese sus Sillas" required max="40">
                 </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-light">Ingresar ticket</button>
+        <button type="submit" class="btn btn-light">Ingresar viaje</button>
         <a type="button" href="/tickets" class="btn btn-info">Volver</a>
     </form>
 </main>
+<script>
+    function formulario() {
+
+        document.getElementById('id_id_viaje').value='{{form.id_viaje.value}}';
+        document.getElementById('id_usuario_id').value='{{form.usuario_id.value}}';
+        document.getElementById('id_sillas').value='{{form.sillas.value}}';
+    }
+    setTimeout(formulario(), 5000)
+</script>
 {% endblock %}
