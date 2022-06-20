@@ -41,21 +41,19 @@
                 <label for="id_sillas" class="col-sm-3 col-form-label">Pasajes</label>
                 <div class="col-sm-9">
                     <input type="number" class="input_usuario" id="id_sillas" name="sillas"
-                        placeholder="Ingrese sus Sillas" required max="40">
+                        placeholder="Ingrese sus Sillas" required max="40" value='{{form.sillas.value}}'>
                 </div>
             </div>
         </div>
         <button type="submit" class="btn btn-light">Ingresar viaje</button>
         <a type="button" href="/tickets" class="btn btn-info">Volver</a>
     </form>
+    <script>
+        function formulario(){
+            document.getElementById('id_id_viaje').value='{{form.id_viaje.value}}';
+            document.getElementById('id_usuario_id').value='{{form.usuario_id.value}}';
+        }
+        setTimeout(formulario(), 5000)
+    </script>
 </main>
-<script>
-    function formulario() {
-
-        document.getElementById('id_id_viaje').value='{{form.id_viaje.value}}';
-        document.getElementById('id_usuario_id').value='{{form.usuario_id.value}}';
-        document.getElementById('id_sillas').value='{{form.sillas.value}}';
-    }
-    setTimeout(formulario(), 5000)
-</script>
 {% endblock %}

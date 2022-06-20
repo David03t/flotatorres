@@ -36,7 +36,7 @@ def actualizar_ticket(request, id):
         if forms.is_valid():
             forms.save()
             return redirect('tickets_url')
-    return render(request, 'tickets/add_tickets.html',tipos )
+    return render(request, 'tickets/update_tickets.html',tipos )
 
 def borrar_ticket(request,id):
     tickets = Tickets.objects.get(id=id)
